@@ -1,0 +1,2 @@
+# pangramGenerator
+Using a simple probabalistic method for generating sentences, called a Markov Chain, the pangram generator is first trained on a dataset, such as a favorite author, book, blog... and then set free to generate pangrams, sentences that contain all of the letters of the alphabet, to use while showing off or testing out different fonts. Inspired by listening to Lumi's podcast interview of Frere Jones, http://blog.lumi.com/wellmade/2-tobias-frere-jones.
