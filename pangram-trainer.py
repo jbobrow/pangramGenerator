@@ -1,7 +1,10 @@
 #http://stackoverflow.com/questions/5306729/how-do-markov-chain-chatbots-work
 #lukebot-trainer.py
 import pickle
-b=open('matilda.txt')
+corpus=raw_input('enter a corpus: ')
+corpus_name = 'lexicon-' + corpus
+filename = 'books/' + corpus + '.txt'
+b=open(filename)
 text=[]
 for line in b:
     for word in line.split():
@@ -16,6 +19,6 @@ for l in range(len(textset)):
         if check==text[w] and text[w][-1] not in '(),.?!':
             working.append(str(text[w+1]))
     follow[check]=working
-a=open('lexicon-matilda','wb')
+a=open(corpus_name,'wb')
 pickle.dump(follow,a,2)
 a.close()
