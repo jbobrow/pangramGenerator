@@ -2,7 +2,7 @@
 #lukebot-trainer.py
 import pickle
 corpus=raw_input('enter a corpus: ')
-corpus_name = 'lexicon-' + corpus
+corpus_name = 'lexicons/lexicon-' + corpus
 filename = 'books/' + corpus + '.txt'
 b=open(filename)
 text=[]

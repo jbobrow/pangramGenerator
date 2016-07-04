@@ -1,8 +1,12 @@
 #pangramGenerator
 import pickle,random
 
+#prompt for a lexicon first
+corpus=raw_input('enter a corpus: ')
+corpus_name = 'lexicons/lexicon-' + corpus
+
 #load our trained lexicon
-a=open('lexicon-matilda','rb')
+a=open(corpus_name,'rb')
 successorlist=pickle.load(a)
 a.close()
 
