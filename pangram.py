@@ -2,12 +2,12 @@
 import pickle,random
 
 #prompt for a lexicon first
-corpus=raw_input('enter a corpus: ')
+corpus = raw_input('enter a corpus: ')
 corpus_name = 'lexicons/lexicon-' + corpus
 
 #load our trained lexicon
-a=open(corpus_name,'rb')
-successorlist=pickle.load(a)
+a = open(corpus_name,'rb')
+successorlist = pickle.load(a)
 a.close()
 
 #get the next word in the sentence
@@ -39,14 +39,14 @@ def nextword(a,r):
     else:
         return 'the'
 
-speech=''
+speech = ''
 
 #main loop (only quit when user types quit)
-while speech!='quit':
+while speech != 'quit':
     #start us off with a word, if we don't have it, we'll start with 'the'
-    speech=raw_input('>')
-    s=random.choice(speech.split())
-    response=''
+    speech = raw_input('>')
+    s = random.choice(speech.split())
+    response = ''
     
     #keep track of letters used in the pangram so far
     remaining = 'abcdefghijklmnopqrstuvwxyz' 
